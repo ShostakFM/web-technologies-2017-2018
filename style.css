@@ -3,93 +3,109 @@
     height: 300px;
     width: 100%;
 }
-body{
+
+body {
     background: #EDE7F6;
-    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
     height: 1800px;
     margin: 0;
 }
-.main-size{
+
+.main-size {
     background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 1350px;
     margin-left: auto;
     margin-right: auto;
     width: 640px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    height: 1350px;
 }
-form{
+
+form {
     margin-top: -100px;
 }
 
-.star{
+.star {
     color: red;
 }
-header{
+
+header {
     background-color: rgb(179, 136, 255);
     height: 8px;
 }
-h1,h2,h3{
+
+h1, h2, h3 {
     font-weight: lighter;
     line-height: 135%;
     padding-left: 34px;
     padding-right: 34px;
 }
+
 h2 {
     font-size: 20px;
 }
-p{
+
+p {
     font-size: 13px;
     padding-left: 34px;
     padding-right: 34px;
 }
-input[type=text]{
-    font-size: 20px;
+
+input[type=text] {
     border-color: #bababa;
     border-style: none none solid none;
+    font-size: 20px;
     width: 100%
 
 }
-input[type=text]:focus{
-    font-size: 20px;
+
+input[type=text]:focus {
     border-color: #c151e2;
     border-style: none none solid none;
+    font-size: 20px;
 }
-label{
+
+label {
     font-size: 15px;
 }
+
 input[type=radio] {
-    transform: scale(1.3);
-    margin-bottom: 20px;
     font-size: 15px;
+    margin-bottom: 20px;
+    transform: scale(1.3);
 }
+
 select {
     margin-left: 20px;
     transform: scale(1.2);
 }
-input[type=checkbox]{
-    transform: scale(1.3);
+
+input[type=checkbox] {
     margin-bottom: 20px;
+    transform: scale(1.3);
 }
-#ar{
-    width: 0;
+
+#ar {
     height: 0;
     overflow: hidden;
+    width: 0;
 }
-#ar + label{
-    text-align:center;
-    font:14px Arial, Helvetica, sans-serif;
+
+#ar + label {
+    background-color: white;
+    color: #4285f4;
+    font: 14px Arial, Helvetica, sans-serif;
     font-weight: lighter;
-    color:#4285f4;
-    background-color:white;
+    text-align: center;
 }
+
 .button {
-    border:solid 1px #4285f4;
+    background-color: #4285f4;
+    border: solid 1px #4285f4;
     border-radius: 4px;
-    text-align:center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 500;
-    ffont-family: Arial, Helvetica, sans-serif;
-    color:white;
-    background-color:#4285f4;
-    padding:9px 13px;
+    padding: 9px 13px;
+    text-align: center;
 }
