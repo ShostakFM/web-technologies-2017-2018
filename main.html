@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password request form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="back"></div>
+    <form action="" method="post" target="_self" id="main">
+        <div class="main-size">
+            <header></header>
+            <h1>Password request form</h1>
+            <p>После загрузки файлов и отправки формы данные, связанные с Вашим аккаунтом Google (имя и фотография), будут записаны. Вы не fm.shostak@gmail.com? <a href="#">Сменить аккаунт</a></p>
+            <p style="color: red;"><span class="star">*&nbsp;</span>Обязательно</p>
+            <h2>Please fill your name<span class="star">*&nbsp;</span></h2>
+            <p><input name="answer" type="text" placeholder="Мой ответ"></p>
+            <h2>What color you like <span class="star">*&nbsp;</span></h2>
+            <p><label>
+                <input name="color" type="radio" value="1">Red<br>
+                <input name="color" type="radio" value="1">Green<br>
+                <input name="color" type="radio" value="1">Blue<br>
+                <input name="color" type="radio" value="1">Black<br>
+                <input name="color" type="radio" value="1">White<br>
+                <input name="color" type="radio" value="1">Other:<input name="answer" type="text">
+            </label></p>
+            <h2>What town you like more? <span class="star">*&nbsp;</span></h2>
+            <p><select>
+                <option required>Выбрать</option>
+                <option value="">Brest</option>
+                <option value="">Minsk</option>
+                <option value="">Gomel</option>
+                <option value="">Grodno</option>
+                <option value="">Vitebsk</option>
+                <option value="">Mogilev</option>
+            </select></p>
+            <h2>Please describe (at least 50 symbols on symbols) your favorite programming language<span class="star">*&nbsp;</span></h2>
+            <p><input name="answer" type="text" placeholder="Мой ответ"></p>
+            <h2>What years of education did you really like?<span class="star">*&nbsp;</span></h2>
+            <p><label><input type="checkbox" name="d" value="1"> First<br>
+                <input type="checkbox" name="d" value="2"> Second<br>
+                <input type="checkbox" name="d" value="3"> Third<br>
+                <input type="checkbox" name="d" value="4"> Fourth<br></label></p>
+            <h2>Please send any image <span class="star">* </span></h2>
+            <p><input type="file" id="ar" name="image"><label for="ar">ДОБАВИТЬ ФАЙЛ</label></p>
+            <h2>Set last Monday <span class="star">*&nbsp;</span></h2>
+            <p><input type="date" name="calendar"></p>
+            <p><input type="submit" value="ОТПРАВИТЬ" class="button"></p>
+        </div>
+    </form>
+</body>
+</html>
