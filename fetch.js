@@ -1,6 +1,3 @@
-/*function create(element) {
-    return document.createElement(element);
-}*/
 function addImg(name, content, sty) {
     name.setAttribute('class', sty);
     name.src=content;
@@ -29,23 +26,34 @@ function fun() {
         createPage(user);
 })
 }
-function apiRequest(url){
+function apiRequest(url) {
     return fetch(url)
         .then(response =>{
-        if(response.status>=200 && response.status<400){
-        return response.json()
-    }
-else{
-        alert('Error: '+response.status)
-    }
-})
+            if (response.status >= 200 && response.status < 400)
+                return response.json();
+            else createError();
+        })
 }
 function getUserInfo(login) {
     const url = 'https://api.github.com/users/' + login;
     return apiRequest(url);
 }
 
+function createError() {
+    const err = document.createElement('h1');
+    err.innerText=`User with login ${uname.value} does not exist`;
+    cont.appendChild(err);
+    err.id = 'err';
+}
+
+function clear(nameId) {
+    if (document.getElementById(nameId))
+        cont.removeChild(document.getElementById(nameId));
+}
+
 function createPage(user) {
+    clear('info');
+
     let root = document.getElementById('root');
     let block = document.createDocumentFragment();
     root.innerText='';
@@ -64,8 +72,8 @@ function createPage(user) {
     addTxt(bio, user.bio, 'bio_sty');
     addTxt(company, user.company, 'company_sty');
     addTxt(location, user.location, 'location_sty');
-    addTxt(email, user.email, 'email_sty');
-    addTxt(blog, user.blog, 'blog_sty');
+    addLink(email, user.email, 'email_sty');
+    addLink(blog, user.blog, 'blog_sty');
 
     add(block,avatar);
     add(block,name);
