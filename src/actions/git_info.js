@@ -1,36 +1,57 @@
 import GitHubAPI from '../GitAPI';
+import store from '../index';
+import React from 'react';
 
-export const fetchSuccess = () => (dispatch) => {
-    const text = document.getElementById('textInput');
-    GitHubAPI.getUser(text.value).then( (result) =>{
-        dispatch({
-            type: 'FETCH_SUCCESS',
-            data: {
-                userImg: result.avatar_url,
-                userName: result.name,
-                userLogin: result.login,
-                userBio: result.bio,
-                userCompany: result.company,
-                userLocation: result.location,
-                userEmail: result.email,
-                userSocial: result.blog,
-                isError: false
-            }
-        })})
-        .catch((err) => {
-            if (err.message === 'FETCH_ERROR'){
-                dispatch({
-                    type: 'FETCH_ERROR',
-                    isError: true,
-                    errName: '404 NOT FOUND'
-                });
-            }
-            else{
-                dispatch({
-                    type: 'SERVER_ERROR',
-                    isError: true,
-                    errName: 'There are some server errors'
-                });
-            }
-        });
+export const getRepos = () => (dispatch) => {
+    GitHubAPI.getOtherInfo(store.getState().userInfo.reposUrl).then(
+        (res) => {
+            const result = [];
+            res.forEach((element) => {
+                result.push(element.name)
+            });
+            const repos = result.map((element, step) =>{
+                return <li key={step}>{element}</li>
+            });
+            dispatch({
+                type: 'FETCH_REPOS_SUCCESS',
+                repos: repos
+            })
+        }
+    )
+};
+
+export const getFollowers = () => (dispatch) => {
+    GitHubAPI.getOtherInfo(store.getState().userInfo.followersUrl).then(
+        (res) => {
+            const result = [];
+            res.forEach((element) => {
+                result.push(element.login)
+            });
+            const followers = result.map((element, step) =>{
+                return <li key={step}>{element}</li>
+            });
+            dispatch({
+                type: 'FETCH_FOLLOWERS_SUCCESS',
+                followers: followers
+            })
+        }
+    )
+};
+
+export const getOrganizations = () => (dispatch) => {
+    GitHubAPI.getOtherInfo(store.getState().userInfo.organizationsUrl).then(
+        (res) => {
+            const result = [];
+            res.forEach((element) => {
+                result.push(element.login)
+            });
+            const organizations = result.map((element, step) =>{
+                return <li key={step}>{element}</li>
+            });
+            dispatch({
+                type: 'FETCH_ORGANIZATIONS_SUCCESS',
+                organizations: organizations
+            })
+        }
+    )
 };

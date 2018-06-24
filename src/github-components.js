@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import {faUsers, faLocationArrow, faLink} from '@fortawesome/fontawesome-free-solid';
 import {connect} from 'react-redux';
-import {fetchSuccess} from "./actions/git_info";
+import {fetchSuccess} from "./actions/user";
 
 function Link(props) {
     return (
