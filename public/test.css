@@ -3,21 +3,18 @@ body{
     font-family: Arial, sans-serif;
     background: slategrey;
     margin: 0;
-    width: 100%;
 }
 
 .part_two{
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 .tab_head{
     display: flex;
 }
 textarea{
     height: 300px;
-}
-.part_two{
-    margin: 0;
 }
 .part_two > div > button{
     border-radius: 10px;
@@ -64,21 +61,21 @@ input[type = "submit"]{
     display: flex;
     justify-content: center;
 }
-#add_in > div > img{
-    margin-right: 100px;
-    margin-left: 200px;
-}
 #add_in > div{
     background: #9da998;
     border-radius: 150px;
     padding: 10px;
     width: 100%;
 }
+#add_in > div > img{
+    margin-right: 100px;
+    margin-left: 200px;
+}
 .bio{
     width: 50%;
 }
 .info{
-    width: 500px;
+    width: 1000px;
 }
 .info_center{
     margin-left: 50px;
@@ -94,21 +91,24 @@ input[type = "submit"]{
     width: 100%;
     align-items: center;
     margin-top: 15px;
-    margin-left: 15px;
 }
 .userInfo{
     margin-top: 50px;
     margin-left: 25px;
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
+
 #root > div{
     display: flex;
     flex-direction: column;
 }
-svg{
-    background-color: #fff;
-    border-radius: 20px;
-}
 .bioInfo{
-    width: 500px;
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+}
+image {
+    height: 460px;
 }

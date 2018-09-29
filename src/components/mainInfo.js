@@ -7,7 +7,7 @@ function MainInfo(props) {
             <img src={props.bio.img_url} alt="noPhoto"/>
             <div className="info_center">
                 <h1 className="name">{props.bio.name ? props.bio.name : "Name isn't filled"}</h1>
-                <p className="login">Login: {props.bio.login}</p>
+                <p className="login"> Login: {props.bio.login}</p>
                 <p className="bio">Bio: {props.bio.bio ? props.bio.bio : "Bio isn't filled"}</p>
                 <p className="company">Company: {props.bio.company ? props.bio.company : "Company isn't filled"}</p>
                 <p className="location">Location: {props.bio.location ? props.bio.location : "Location isn't filled"}</p>
